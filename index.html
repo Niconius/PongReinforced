@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PongReinforced</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+        <script src="main.js"></script>
+        <script src="global_variables.js"></script>
+        <script src="pong.js"></script>
+        <script src="reinforcement_learning.js"></script>
+        <link rel="stylesheet" href="mycss.css" />
+    </head>
+    <body>
+        <div id="outercontainer">
+            <h2>Reinforcement Learning with Pong + Deep Q-Network</h2>
+            <div id="leftSide">
+                <h5 id="label_instances">Training Data:</h5>
+                <h5 id="count_instances">0</h5>
+                <div id="buttonBlock">
+                    <button type="button" id="trainBtn">Train</button>
+                    <button type="button" id="testBtn">Test</button>
+                </div>
+                <button type="button" id="resetTrainingBtn">Reset Training</button>
+                <button type="button" id="foo">foo</button>
+                <br/>
+                <input type="range" min="1" max="8" value="4" step="0.5" id="botSpeedSlider">
+                <p id="botSpeedValue"></p>
+                <input type="range" min="1" max="8" value="4" step="0.5" id="ballSpeedSlider">
+                <p id="ballSpeedValue"></p>
+                <p id="fps"></p>
+            </div>
+            <div class="row" id="bottomcontainer">
+                <h5 id="bottom1" class="col-md-4">Bot (Drag paddle to play)</h5>
+                <h5 id="bottom2" class="col-md-4">- : -</h5>
+                <h5 id="bottom3" class="col-md-4">Bot</h5>
+            </div>
+            <canvas id="gc" width="840" height="480"></canvas>
+        </div>
+    </body>
+</html>
